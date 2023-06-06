@@ -11,7 +11,7 @@ interface ModalProps {
   title?: string;
   body?: React.ReactElement;
   footer?: React.ReactElement;
-  actionLebel: string;
+  actionLabel: string;
   disabled: boolean;
   secondaryAction?: () => void;
   secondaryActionLabel?: string;
@@ -24,7 +24,7 @@ export default function Modal({
   title,
   body,
   footer,
-  actionLebel,
+  actionLabel,
   disabled,
   secondaryAction,
   secondaryActionLabel,
@@ -91,18 +91,17 @@ export default function Modal({
               {/* FOOTER */}
               <div className="flex flex-col gap-2 p-6">
                 <div className="flex flex-row items-center gap-4 w-full">
-                  {secondaryAction &&
-                    secondaryActionLabel(
-                      <Button
-                        outline
-                        disabled={disabled}
-                        label={secondaryActionLabel}
-                        onClick={handleSecondaryAction}
-                      />
-                    )}
+                  {secondaryAction && secondaryActionLabel && (
+                    <Button
+                      outline
+                      disabled={disabled}
+                      label={secondaryActionLabel}
+                      onClick={handleSecondaryAction}
+                    />
+                  )}
                   <Button
                     disabled={disabled}
-                    label={actionLebel}
+                    label={actionLabel}
                     onClick={handleSubmit}
                   />
                 </div>
