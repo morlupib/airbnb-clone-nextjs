@@ -10,11 +10,11 @@ import { useRouter } from "next/navigation";
 import useLoginModal from "@/hooks/useLoginModal";
 import useRegisterModal from "@/app/hooks/useRegisterModal";
 
-import Modal from "./Modal";
-import Heading from "../Heading";
-import Input from "../Inputs/Input";
+import Modal from "@/components/Modals/Modal";
+import Heading from "@/components/Heading";
+import Input from "@/components/Inputs/Input";
 import { toast } from "react-hot-toast";
-import Button from "../Button";
+import Button from "@/components/Button";
 
 export default function LoginModal() {
   const router = useRouter();

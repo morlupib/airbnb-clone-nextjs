@@ -2,7 +2,6 @@
 
 import useCountries from "@/app/hooks/useCountries";
 import Select from "react-select";
-import Image from "next/image";
 
 export type CountrySelectValue = {
   flag: string;
