@@ -17,6 +17,10 @@ export default async function ListingPage({ params }: { params: IParams }) {
     return <EmptyState />;
   }
 
+  if (!currentUser) {
+    return <EmptyState title="Unauthorized" subtitle="Please login" />;
+  }
+
   return (
     <ListingClient
       listing={listing}

@@ -1,4 +1,4 @@
-import { getCurrentUser } from "../actions/getCurretUser";
+import { getCurrentUser } from "@/app/actions/getCurretUser";
 import getReservations from "../actions/getReservations";
 import EmptyState from "../components/EmptyState";
 import ReservationsClient from "./ReservationsClient";

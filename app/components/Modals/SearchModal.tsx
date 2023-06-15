@@ -24,6 +24,7 @@ export default function SearchModal() {
   const params = useSearchParams();
   const searchModal = useSearchModal();
 
+  const [isLoading, setIsLoading] = useState(false);
   const [location, setLocation] = useState<CountrySelectValue>();
   const [step, setStep] = useState(STEPS.LOCATION);
   const [guestCount, setGuestCount] = useState(1);
@@ -52,6 +53,8 @@ export default function SearchModal() {
     if (step !== STEPS.INFO) {
       return onNext();
     }
+
+    setIsLoading(true);
 
     let currentQuery = {};
 
@@ -84,6 +87,7 @@ export default function SearchModal() {
     );
 
     setStep(STEPS.LOCATION);
+    setIsLoading(false);
     searchModal.onClose();
     router.push(url);
   }, [
@@ -173,6 +177,7 @@ export default function SearchModal() {
 
   return (
     <Modal
+      disabled={isLoading}
       isOpen={searchModal.isOpen}
       onClose={searchModal.onClose}
       onSubmit={onSubmit}
