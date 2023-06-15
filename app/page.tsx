@@ -31,3 +31,5 @@ export default async function Home({ searchParams }: HomeProps) {
     </main>
   );
 }
+
+export const dynamic = "force-dynamic";

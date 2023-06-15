@@ -4,7 +4,7 @@ import qs from "query-string";
 import useSearchModal from "@/app/hooks/useSearchModal";
 import Modal from "./Modal";
 import { useRouter, useSearchParams } from "next/navigation";
-import { use, useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { Range } from "react-date-range";
 import dynamic from "next/dynamic";
 import CountrySelect, { CountrySelectValue } from "../Inputs/CountrySelect";

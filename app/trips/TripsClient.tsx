@@ -1,6 +1,6 @@
 "use client";
 
-import { User, Reservation } from "@prisma/client";
+import { User } from "@prisma/client";
 import Container from "@/components/Container";
 import Heading from "@/components/Heading";
 import { useRouter } from "next/navigation";
